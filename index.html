@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body style="background-color: aquamarine;">
+    <div id="alert" style="margin-top: 50px; text-align: center; display: none;">
+      <h3 id="header"> !!!!!!!!!!!!!!!!!!!!!! </h3>
+    </div>
+    <div style="width:500px; margin: 4rem auto; color: red;">
+        <label style="display:block; font-size: 15; font-weight: 600;"> Full Name </label>
+        <input id="name" type="text" style="outline-color: blanchedalmond; width: 500px" placeholder="Please type in your name ..."/>
+
+        <label style="display:block; font-size: 15; font-weight: 600; margin-top: 40px;"> Age </label>
+        <input type="text" style="outline-color: blanchedalmond; width: 500px" placeholder="Please type in your age ..."/>
+
+        <button type="button" onclick="log_name()" style="background-color: blue; 
+                                    margin: 30px auto; 
+                                    display: block; 
+                                    width: 100px;
+                                    outline: none;
+                                    color: white;
+                                    border-radius: 16px;
+                                    "> Submit </button>
+    </div>
+    <div style='text-align: center;'>
+        <h3>
+        <a href="welcome_page.html" style="color: blue; font-size: 16px; font-weight: 300; font-style: bold;">Go Home!</a>
+        </h3>
+    </div>
+</body>
+<script>
+    function log_name(){
+        var name = document.getElementById('name');
+        var header = document.getElementById('header');
+        var alert = document.getElementById("alert");
+        console.log(name.value);
+        // if(name.value != 'Mohamed El Ghafiani'){
+            console.log("You're not allowed to pass!!!");
+            alert.style.display = 'block';
+            header.innerHTML = 'Welcome ' + name.value + '!' 
+
+        // }
+    }
+</script>
+</html>
